@@ -8,7 +8,7 @@ We are proud to publish Apache Pulsar 2.5.1. This is the result of a huge effort
 
 For detailed changes related to 2.5.1 release, refer to the <b>[release notes](/release-notes/#2.5.1)</b> and the <b>[PR list for Pulsar 2.5.1](https://github.com/apache/pulsar/pulls?q=is%3Apr+label%3Arelease%2F2.5.1+is%3Aclosed(%E8%BF%99%E4%B8%AA%E5%BA%94%E8%AF%A5%E6%98%AF%E6%9C%80%E6%98%8E%E7%BB%86%E7%9A%84))</b>.
 
-The following justs highlights a tiny subset of new features.
+The following just highlights a tiny subset of new features.
 
 <!--truncate-->
 
