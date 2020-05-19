@@ -8,7 +8,7 @@ This document describes how to use the Pulsar Perf for performance testing. For 
 
 ## Pulsar Perf
 
-The Pulsar Perf is a built-in performance test tool for Apache Pulsar. You can use the Pulsar Perf to test message writing or reading performance.
+The Pulsar Perf is a built-in performance test tool for Apache Pulsar. You can use the Pulsar Perf to test the performance of message writing or reading.
 
 ### Produce messages
 
@@ -18,7 +18,7 @@ This example shows how the Pulsar Perf produces messages with default options. F
 bin/pulsar-perf produce my-topic
 ```
 
-After the command is executed, the test data is continuously output on the Console.
+After the command is executed, the test data is continuously output on the console.
 
 **Output**
 
@@ -36,7 +36,7 @@ After the command is executed, the test data is continuously output on the Conso
 19:54:44.336 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Aggregated latency stats --- Latency: mean:   3.383 ms - med:   3.293 - 95pct:   4.610 - 99pct:   5.059 - 99.9pct:   5.588 - 99.99pct:   5.837 - 99.999pct:   6.609 - Max:   6.609
 ```
 
-From the above test data, you can get the throughput statistics and the write latency statistics. The aggregated statistics is printed when the Pulsar Perf is stopped. You can press **Ctrl**+**C** to stop the Pulsar Perf. After the Pulsar Perf is stopped, the [HdrHistogram](http://hdrhistogram.github.io/HdrHistogram/) formatted test result appears under your directory. The document looks like `perf-producer-1589370810837.hgrm`. You can also check the test result through [HdrHistogram Plotter](https://hdrhistogram.github.io/HdrHistogram/plotFiles.html). For details about how to check the test result through [HdrHistogram Plotter](https://hdrhistogram.github.io/HdrHistogram/plotFiles.html), see [HdrHistogram Plotter](#hdrhistogram-plotter).
+From the above test data, you can get the throughput stats and the write latency stats. The aggregated stats are printed when the Pulsar Perf is stopped. You can press **Ctrl**+**C** to stop the Pulsar Perf. After the Pulsar Perf is stopped, the [HdrHistogram](http://hdrhistogram.github.io/HdrHistogram/) formatted test result appears under your directory. The document looks like `perf-producer-1589370810837.hgrm`. You can also check the test result through [HdrHistogram Plotter](https://hdrhistogram.github.io/HdrHistogram/plotFiles.html). For details about how to check the test result through [HdrHistogram Plotter](https://hdrhistogram.github.io/HdrHistogram/plotFiles.html), see [HdrHistogram Plotter](#hdrhistogram-plotter).
 
 #### Configuration options for `pulsar-perf produce`
 
@@ -70,7 +70,7 @@ The following table lists configuration options available for the `pulsar-perf p
 | rate | Set the publish rate of messages across topics. | 100 |
 | service-url | Set the Pulsar service URL. | |
 | size | Set the message size. | 1024 bytes |
-| stats-interval-seconds | Set the statistics interval. If it is set to 0, statistics is disabled. | 0 |
+| stats-interval-seconds | Set the stats interval. If it is set to 0, stats is disabled. | 0 |
 | test-duration | Set the test duration. If it is set to 0, it keeps publishing tests. | 0s |
 | trust-cert-file | Set the path for the trusted TLS certificate file. | <empty string> |
 | warmup-time | Set the warm-up time. | 1s |
@@ -83,7 +83,7 @@ This example shows how the Pulsar Perf consumes messages with default options.
 bin/pulsar-perf consume my-topic
 ```
 
-After the command is executed, the test data is continuously output on the Console.
+After the command is executed, the test data is continuously output on the console.
 
 **Output**
 
@@ -100,7 +100,7 @@ After the command is executed, the test data is continuously output on the Conso
 20:36:42.759 [Thread-1] INFO  org.apache.pulsar.testclient.PerformanceConsumer - Aggregated latency stats --- Latency: mean: 9.422 ms - med: 9 - 95pct: 15 - 99pct: 16 - 99.9pct: 98 - 99.99pct: 137 - 99.999pct: 152 - Max: 152
 ```
 
-From the output test data, you can get the throughput statistics and the end-to-end latency statistics. The aggregated statistics is printed after the Pulsar Perf is stopped. You can press **Ctrl**+**C** to stop the Pulsar Perf.
+From the output test data, you can get the throughput stats and the end-to-end latency stats. The aggregated stats are printed after the Pulsar Perf is stopped. You can press **Ctrl**+**C** to stop the Pulsar Perf.
 
 #### Configuration options for `pulsar-perf consume`
 
@@ -124,7 +124,7 @@ The following table lists configuration options available for the `pulsar-perf c
 | receiver-queue-size | Set the size of the receiver queue. | 1000 |
 | replicated | Configure whether the subscription status should be replicated. | false |
 | service-url | Set the Pulsar service URL. | |
-| stats-interval-seconds | Set the statistics interval. If it is set to 0, statistics is disabled. | 0 |
+| stats-interval-seconds | Set the stats interval. If it is set to 0, stats is disabled. | 0 |
 | subscriber-name | Set the subscriber name prefix. | sub |
 | subscription-type | Set the subscription type. <li> Exclusive <li> Shared <li> Failover <li> Key_Shared | Exclusive |
 | trust-cert-file | Set the path for the trusted TLS certificate file. | <empty string> |
@@ -176,6 +176,6 @@ To check test results through the HdrHistogram Plotter, follow these steps:
 
 5. You will get two output files. Upload the output file with the filename extension of .hgrm to the [HdrHistogram Plotter](https://hdrhistogram.github.io/HdrHistogram/plotFiles.html).
 
-6. Check the test result through the Graphical User Interface of the HdrHistogram Plotter, as shown blow.
+6. Check the test result through the Graphical User Interface of the HdrHistogram Plotter, as shown below.
 
     ![](assets/perf-produce.png)
